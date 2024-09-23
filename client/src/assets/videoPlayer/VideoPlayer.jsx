@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import ReactPlayer from 'react-player'
+import thumbnail from '../thumbnail.jpg'
+import play from '../play.png'
 
 const VideoPlayer = ({ url }) => {
   const webcamRef = useRef(null) // Reference for the webcam video element
@@ -33,7 +35,13 @@ const VideoPlayer = ({ url }) => {
         height={240}
         style={{ marginBottom: '20px' }}
       />
-      <ReactPlayer url={url} controls={true} width={1280} height={720} />
+      <ReactPlayer
+        url={url}
+        controls={true}
+        width={1280}
+        height={720}
+        light={thumbnail}
+      />
     </div>
   )
 }
